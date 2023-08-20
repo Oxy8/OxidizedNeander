@@ -1,0 +1,208 @@
+/* ibm-plex-sans-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'IBM Plex Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/ibm-plex-sans-v19-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+} 
+/* ibm-plex-sans-italic - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'IBM Plex Sans';
+  font-style: italic;
+  font-weight: 400;
+  src: url('../fonts/ibm-plex-sans-v19-latin-italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* ibm-plex-mono-100 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 100;
+  src: url('../fonts/ibm-plex-mono-v19-latin-100.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* ibm-plex-mono-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/ibm-plex-mono-v19-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* ibm-plex-mono-italic - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'IBM Plex Mono';
+  font-style: italic;
+  font-weight: 400;
+  src: url('../fonts/ibm-plex-mono-v19-latin-italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+body {
+  margin: 0;
+  background-color: #333;
+}
+
+.app {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  /* gap: 6px; */
+}
+
+/* Add bar between left and right panels. */
+/*
+.app:before {
+  content: "";
+  border: 2px solid #666;
+  border-radius: 2px;
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+  order: 2;
+}
+*/
+
+/* Left side */
+
+.app .left-side {
+  flex: 4;
+  padding-top: 5vh;
+  padding-bottom: 0vh;
+  padding-left: 0vh;
+  padding-right: 0vh; 
+  overflow-y: scroll;
+  display: flex;
+  align-items: baseline;
+  flex-flow: row nowrap;
+  order: 1;
+}
+
+.app .left-side .mnemonics {
+  width: 40%;
+  padding: 0px;
+  color: #fff;
+  text-align: left;
+  overflow-y: scroll;
+  display: flex;
+  align-items: baseline;
+  flex-flow: column nowrap;
+  margin: 0px;
+}
+
+.app .left-side .mnemonics p {
+  padding: 0px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 32px;
+  font-weight: 400;
+  border: none;
+  outline: none;
+  text-align: left;
+  margin: 0px;
+}
+
+.app .left-side .memory {
+  width: 60%;
+  overflow-y: scroll;
+  display: flex;
+  align-items: baseline;
+  flex-flow: column nowrap;
+}
+
+.clip-text {
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(0.25turn, #ddd, #888);
+}
+
+.app .left-side .memory .one-line {
+  width: 100%;
+  display: flex;
+  align-items: baseline;
+  flex-flow: row nowrap;
+  border: none;
+  outline: none;
+  margin: 0px;
+}
+
+
+
+.app .left-side .memory .one-line .indices {
+  flex: 3;
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 100;
+  font-size: 32px;
+  text-align: center;
+  color: #fff;
+  border: none;
+  outline: none;
+  margin: 0px;
+
+}
+
+
+.app .left-side .memory .one-line .memory {
+  flex: 8;
+}
+.app .left-side .memory .one-line .memory input {
+  width: 100%;
+  padding: 0px 0px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 32px;
+  font-weight: 400;
+  color: #dbdbdb;
+  border: none;
+  outline: none;
+  background: transparent;
+  text-align: left;
+}
+
+/* Right side */
+
+.app .right-side {
+  flex: 6;
+  background: linear-gradient(300deg, #061727, #003a6d);
+  display: flex;
+  flex-flow: column wrap;
+  order: 3;
+}
+
+.app .right-side .buttons {
+  width: 100%;
+  display: flex;
+  align-items: baseline;
+  flex-flow: row wrap;
+}
+.app .right-side .buttons button {
+  color: #fff;
+  font-family: 'IBM Plex Sans';
+  font-size: 2vw;
+  font-style: italic;
+  font-weight: 400;
+  margin: 2vw;
+  background: transparent;
+  border-bottom: 1px solid #fff;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  opacity: 0.8;
+}
+.app .right-side .buttons button:hover {
+  color: #a6c8ff;
+  border-bottom: 2px solid #a6c8ff;
+}
+
+.app .right-side .indicators {
+  padding-left: 5%;
+  width: 95%;
+}
+.app .right-side .indicators p {
+  color: #fff;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 2vw;
+  font-style: italic;
+  font-weight: 400;
+  opacity: 0.9;
+}
+ 

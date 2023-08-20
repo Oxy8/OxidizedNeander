@@ -1,0 +1,22 @@
+
+automate building process (calling wasm-pack with the proper options, installing npm packages, running...)
+
+------------------------------------
+Coluna de dados
+
+-----------
+Add breakpoint
+
+
+------------
+Ao apertar enter na memória, fazer descer uma coluna a seleção
+
+---------------
+2 tipos de reset, um que restaura o estado todo de memória/dados
+outro que só seta o process counter pra 0
+
+---------------
+
+Instead of Handling errors in case of an unknown number for input,
+just clamp the number.
+
